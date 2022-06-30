@@ -1,2 +1,4 @@
 *node_modules/*
 yarn.lock
+
+*/src/config/firebase/credentials-staging.json
