@@ -1,20 +1,17 @@
-import {Request, Response} from 'express';
+import * as HelpCity from "@app/actions/helpCity";
 
-const prefixRoute = '/helpCity';
+const prefixRoute = "/help-city";
 
 const routes = [
   {
-    method: 'GET',
-    path: '/',
-    description: 'get the hello world',
-    action: (req: Request, res: Response)=> {
-      
-      return res.status(200).send({ message: 'Hello World'});
-    }
-  }
-]
+    method: "GET",
+    path: "/",
+    description: "get the hello world",
+    ...HelpCity.create,
+  },
+];
 
 export default {
   prefixRoute,
-  routes
-}
+  routes,
+};

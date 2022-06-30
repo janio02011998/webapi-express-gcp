@@ -1,8 +1,11 @@
-import { IIncludeRoutesPrefix } from '../interfaces/routes';
+import { IIncludeRoutesPrefix } from "@app/interfaces/routes";
 
-export function includeRoutePrefix({ routes, prefixRoute }: IIncludeRoutesPrefix) {
+export function includeRoutePrefix({
+  routes,
+  prefixRoute,
+}: IIncludeRoutesPrefix) {
   if (prefixRoute) {
-    return routes.map(route => {
+    return routes.map((route) => {
       const { path } = route;
 
       const pathWithPrefix = `${prefixRoute}${path}`;

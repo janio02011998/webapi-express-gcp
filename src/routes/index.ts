@@ -1,18 +1,18 @@
 import express from "express";
 import { includeRoutePrefix } from "./includeRoutePrefix";
 
-import helpCityRoutes from "~/endpoints/helpCity";
+import helpCityRoutes from "@app/endpoints/helpCity";
 
 const router = express.Router();
 
 export const routes = [...includeRoutePrefix(helpCityRoutes)];
 
 for (const route of routes) {
-  const { path, action, method, middleware } = route;
+  const { path, action, method, middleware = [] } = route;
 
   const methodLowerCase = method.toLowerCase();
 
-  (router as any)[methodLowerCase](path, action, middleware);
+  (router as any)[methodLowerCase](path, ...middleware, action);
 }
 
 router.get("*", (req, res, next) =>
