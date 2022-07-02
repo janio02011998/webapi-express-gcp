@@ -1,12 +1,12 @@
 # Api-to-learn
 
-## Índice
-
-- [Functionalities of the project](#badges)
-- [Open and Run](#Título-e-Imagem-de-capa)
-
 ## :hammer: Functionalities of the project
 
 ## 🛠️ Open and Run
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+1. Run yarn install
+2. you need create a file on directory src/config/firebase/ with name credentials-staging.json
+3. Put on your credentials by account firebase in new file
+4. Run yarn dev
+
+![Badge on building](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
