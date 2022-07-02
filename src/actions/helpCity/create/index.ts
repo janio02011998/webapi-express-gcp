@@ -1,8 +1,21 @@
-import { Request, Response } from "express";
+import { Firestore } from '@app/config/firebase';
+import { Request, Response } from 'express';
 
-function create(req: Request, res: Response) {
+async function create(req: Request, res: Response) {
   try {
-    return res.status(200).send({ message: "Hello World" });
+    await Firestore.collection('helpCity').add({
+      name: 'Camacan',
+      districts: [
+        { name: 'Panelinha' },
+        { name: 'Jacareci' },
+        { name: 'Leo Ventura' },
+      ],
+      coords: {
+        latitude: 0,
+        longitude: 0,
+      },
+    });
+    return res.status(200).send({ success: 'true' });
   } catch (err) {
     throw err;
   }
