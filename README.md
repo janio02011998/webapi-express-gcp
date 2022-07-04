@@ -5,7 +5,7 @@
 ## 🛠️ Open and Run
 
 1. Run yarn install
-2. you need create a file on directory src/config/firebase/ with name credentials-staging.json
+2. Create a file on directory src/config/firebase/ with name credentials-staging.json
 3. Put on your credentials by account firebase in new file
 4. Run yarn dev
 
