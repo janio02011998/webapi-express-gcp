@@ -1,7 +1,6 @@
-import express from "express";
-import { includeRoutePrefix } from "./includeRoutePrefix";
-
-import helpCityRoutes from "@app/endpoints/helpCity";
+import express from 'express';
+import helpCityRoutes from '@app/endpoints/helpCity';
+import { includeRoutePrefix } from './includeRoutePrefix';
 
 const router = express.Router();
 
@@ -15,11 +14,11 @@ for (const route of routes) {
   (router as any)[methodLowerCase](path, ...middleware, action);
 }
 
-router.get("*", (req, res, next) =>
+router.get('*', (req, res, next) =>
   next({
     status: 404,
-    message: "RESOURCE_NOT_FOUND",
-  })
+    message: 'RESOURCE_NOT_FOUND',
+  }),
 );
 
 export default router;

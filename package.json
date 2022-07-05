@@ -2,12 +2,12 @@
   "name": "api-to-learn",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -r tsconfig-paths/register src/index.ts",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
-    "build": "rm -rf build/ && prettier --write source/ && tsc",
+    "build": "rm -rf dist/ && prettier --write src/ && tsc",
     "deploy": "firebase deploy --only functions"
   },
   "keywords": [],
