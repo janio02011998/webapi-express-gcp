@@ -2,12 +2,12 @@
   "name": "api-to-learn",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -r tsconfig-paths/register src/index.ts",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
-    "build": "rm -rf build/ && prettier --write source/ && tsc"
+    "build": "rm -rf dist/ && prettier --write src/ && tsc"
   },
   "keywords": [],
   "author": "",
@@ -20,13 +20,16 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "firebase-admin": "^11.0.0",
+    "html-pdf-node": "^1.0.8",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.18",
+    "phantom": "^6.3.0",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
+    "@types/phantom": "^3.2.6",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "@typescript-eslint/parser": "^5.30.0",
     "eslint": "^8.18.0",
