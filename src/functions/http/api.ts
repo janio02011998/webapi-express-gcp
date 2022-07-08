@@ -16,7 +16,7 @@ api.use((req, res, next) => {
 });
 
 api.use(swagger.serveWithOptions({}));
-api.get('/', swagger.setup(documentation));
+api.get('/api-docs', swagger.setup(documentation));
 
 api.use(router);
 
