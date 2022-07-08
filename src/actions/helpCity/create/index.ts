@@ -7,7 +7,7 @@ async function create(req: Request, res: Response) {
       name: 'Camacan',
       districts: [
         { name: 'Panelinha' },
-        { name: 'Jacareci' },
+        { name: 'Jacareci1' },
         { name: 'Leo Ventura' },
       ],
       coords: {
@@ -15,7 +15,7 @@ async function create(req: Request, res: Response) {
         longitude: 0,
       },
     });
-    return res.status(200).send({ success: 'true' });
+    return res.status(200).send({ success: true });
   } catch (err) {
     throw err;
   }

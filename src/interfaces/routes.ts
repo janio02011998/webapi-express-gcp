@@ -5,6 +5,7 @@ export interface IRoutes {
   method: string;
   action: (req: Request, res: Response) => void;
   middleware?: [];
+  auth?: string;
 }
 
 export interface IIncludeRoutesPrefix {

@@ -2,5 +2,21 @@
   "functions": {
     "source": ".",
     "runtime": "nodejs16"
+  },
+  "emulators": {
+    "ui": {
+      "enabled": true,
+      "host": "localhost",
+      "port": 4001
+    },
+    "functions": {
+      "port": "4000"
+    },
+    "firestore": {
+      "port": "4004"
+    },
+    "pubsub": {
+      "port": "8085"
+    }
   }
 }
