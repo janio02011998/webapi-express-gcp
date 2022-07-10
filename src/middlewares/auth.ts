@@ -7,24 +7,23 @@ export async function basicAuth(
   next: NextFunction,
 ) {
   try {
-    res.set('WWW-Authenticate', 'Basic');
-    const authHeader: string = req.headers.authorization || 'null';
-
+    const authHeader: string = req.headers.authorization || '';
     const parts = authHeader.split(' ');
 
-    if (parts.length !== 2) throw new Error('Token error');
+    if (parts.length !== 2) throw { message: 'Token error' };
 
     const [scheme, token] = parts;
-    if (!authHeader) throw new Error('No token provided');
 
-    if (!/Basic/i.test(scheme)) throw new Error('Token malformatted');
+    if (!authHeader) throw { message: 'No token provided' };
+
+    if (!/Basic/i.test(scheme)) throw { message: 'Token malformatted' };
 
     const client = await Firestore.collection('clients')
       .where('basicAuth', '==', token)
       .get();
 
     if (!client || (client && client.empty)) {
-      throw new Error('Crendenciais inválidas');
+      throw { message: 'Crendenciais inválidas' };
     }
 
     return next();

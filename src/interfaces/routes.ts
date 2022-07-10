@@ -1,10 +1,10 @@
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 
 export interface IRoutes {
   path: string;
   method: string;
   action: (req: Request, res: Response) => void;
-  middleware?: [];
+  middlewares?: { (req: Request, res: Response, next: NextFunction): void }[];
   auth?: string;
 }
 

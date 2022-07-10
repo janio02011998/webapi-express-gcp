@@ -1,5 +1,6 @@
 import express from 'express';
 import helpCityRoutes from '@app/endpoints/helpCity';
+import { basicAuth } from '@app/middlewares/auth';
 import { includeRoutePrefix } from './includeRoutePrefix';
 
 const router = express.Router();
@@ -7,11 +8,23 @@ const router = express.Router();
 export const routes = [...includeRoutePrefix(helpCityRoutes)];
 
 for (const route of routes) {
-  const { path, action, method, middleware = [] } = route;
+  const { path, action, method, middlewares = [], auth } = route;
 
-  const methodLowerCase = method.toLowerCase();
+  if (auth === 'basic') {
+    middlewares.unshift(basicAuth);
+  }
 
-  (router as any)[methodLowerCase](path, ...middleware, action);
+  const methodLowerCase = method.toLowerCase() as
+    | 'all'
+    | 'get'
+    | 'post'
+    | 'put'
+    | 'delete'
+    | 'patch'
+    | 'options'
+    | 'head';
+
+  router[methodLowerCase](path, ...middlewares, action);
 }
 
 router.get('*', (req, res, next) =>

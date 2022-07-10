@@ -5,6 +5,7 @@ const prefixRoute = '/help-city';
 const routes = [
   {
     method: 'GET',
+    auth: 'basic',
     path: '/',
     description: 'get the hello world',
     ...HelpCity.create,
