@@ -27,7 +27,11 @@ function combinePDFBuffers(firstBuffer: Buffer, secondBuffer: Buffer) {
 }
 
 async function getBufferFromURL(urls: string[]) {
-  const options = {};
+  const options = {
+    format: 'A4',
+    printBackground: true,
+    preferCSSPageSize: true,
+  };
   const files = urls.map((item: string) => {
     return { url: item };
   });
