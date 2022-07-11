@@ -10,21 +10,21 @@ export async function basicAuth(
     const authHeader: string = req.headers.authorization || '';
     const parts = authHeader.split(' ');
 
-    if (parts.length !== 2) throw { message: 'Token error' };
+    // if (parts.length !== 2) throw { message: 'Token error' };
 
-    const [scheme, token] = parts;
+    // const [scheme, token] = parts;
 
-    if (!authHeader) throw { message: 'No token provided' };
+    // if (!authHeader) throw { message: 'No token provided' };
 
-    if (!/Basic/i.test(scheme)) throw { message: 'Token malformatted' };
+    // if (!/Basic/i.test(scheme)) throw { message: 'Token malformatted' };
 
-    const client = await Firestore.collection('clients')
-      .where('basicAuth', '==', token)
-      .get();
+    // const client = await Firestore.collection('clients')
+    //   .where('basicAuth', '==', token)
+    //   .get();
 
-    if (!client || (client && client.empty)) {
-      throw { message: 'Crendenciais inválidas' };
-    }
+    // if (!client || (client && client.empty)) {
+    //   throw { message: 'Crendenciais inválidas' };
+    // }
 
     return next();
   } catch (e: any) {
