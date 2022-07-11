@@ -31,6 +31,10 @@ async function getBufferFromURL(urls: string[]) {
     format: 'A4',
     printBackground: true,
     preferCSSPageSize: true,
+    margin: {
+      right: 10,
+      left: 10,
+    },
   };
   const files = urls.map((item: string) => {
     return { url: item };
