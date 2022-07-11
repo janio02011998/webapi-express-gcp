@@ -4,11 +4,18 @@ const prefixRoute = '/help-city';
 
 const routes = [
   {
-    method: 'GET',
+    method: 'POST',
     auth: 'basic',
     path: '/',
-    description: 'get the hello world',
+    description: 'Create city',
     ...HelpCity.create,
+  },
+  {
+    method: 'GET',
+    auth: 'basic',
+    path: '/download-pdf',
+    description: 'get the hello world',
+    ...HelpCity.downloadPDF,
   },
 ];
 

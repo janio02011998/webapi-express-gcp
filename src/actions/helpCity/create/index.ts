@@ -15,9 +15,9 @@ async function create(req: Request, res: Response) {
         longitude: 0,
       },
     });
-    return res.send({ success: true }).sendStatus(200);
+    return res.status(200).send({ success: true });
   } catch (err) {
-    throw err;
+    return res.status(400).send('Erro on create new city');
   }
 }
 

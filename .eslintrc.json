@@ -25,6 +25,7 @@
     "no-useless-catch": "off",
     "no-restricted-syntax": "off",
     "no-throw-literal": "off",
+    "camelcase": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
