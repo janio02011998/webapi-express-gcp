@@ -15,7 +15,7 @@ async function create(req: Request, res: Response) {
         longitude: 0,
       },
     });
-    return res.status(200).send({ success: true });
+    return res.send({ success: true }).sendStatus(200);
   } catch (err) {
     throw err;
   }
