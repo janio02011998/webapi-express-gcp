@@ -16,5 +16,9 @@ export default {
       url: 'http://localhost:4000/api-to-learn-staging/us-central1/api/',
       description: 'Local',
     },
+    {
+      url: 'http://localhost:4000/api-to-learn-staging/us-central1/api/',
+      description: 'Staging',
+    },
   ],
 };

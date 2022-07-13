@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "contributors": [
+    "Jânio Carvalho <janiocarvalhojr@gmail.com"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon -e ts -w src --exec \"npm-run-all build\"",
