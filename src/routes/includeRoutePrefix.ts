@@ -1,4 +1,4 @@
-import { IIncludeRoutesPrefix } from '@app/interfaces/routes';
+import { IIncludeRoutesPrefix } from '~/interfaces/routes';
 
 export function includeRoutePrefix({
   routes,

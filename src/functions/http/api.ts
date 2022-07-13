@@ -2,8 +2,8 @@ import express, { Express } from 'express';
 import cors from 'cors';
 import swagger from 'swagger-ui-express';
 
-import router from '@app/routes';
-import documentation from '@app/docs/swagger';
+import router from '~/routes';
+import documentation from '~/docs/swagger';
 
 const api: Express = express();
 

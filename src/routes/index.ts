@@ -1,6 +1,6 @@
 import express from 'express';
-import helpCityRoutes from '@app/endpoints/helpCity';
-import { basicAuth } from '@app/middlewares/auth';
+import helpCityRoutes from '~/endpoints/helpCity';
+import { basicAuth } from '~/middlewares/auth';
 import { includeRoutePrefix } from './includeRoutePrefix';
 
 const router = express.Router();

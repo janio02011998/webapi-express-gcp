@@ -1,4 +1,4 @@
-import { Firestore } from '@app/config/firebase';
+import { Firestore } from '~/config/firebase';
 import { Request, Response } from 'express';
 
 async function create(req: Request, res: Response) {

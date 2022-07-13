@@ -1,4 +1,4 @@
-import * as HelpCity from '@app/actions/helpCity';
+import * as HelpCity from '~/actions/helpCity';
 
 const prefixRoute = '/help-city';
 

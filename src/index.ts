@@ -1,5 +1,5 @@
 import * as functions from 'firebase-functions';
-import * as httpFunctions from '@app/functions/http';
+import * as httpFunctions from '~/functions/http';
 
 /**
  * API functions
